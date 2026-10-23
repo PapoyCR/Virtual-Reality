@@ -1,14 +1,13 @@
 window.addEventListener("DOMContentLoaded",function() {
   //Challenge 1: Create a variable scene for the <a-scene> component in the HTML
     let scene = document.querySelector("a-scene");
-    let box = document.createElement("a-box");
-
-    scene.append(box);
+    
   //Challenge 2: Create a variable for <a-dodecahedron> and create it.
 
     let dh = document.createElement("a-dodecahedron");
 
-    dh.setAttribute("position",{x: -2, y: 2, z: -1}, "color" ,{#008000});
+    dh.setAttribute("position","0 2 -5");
+    dh.setAttribute("color", "brown");
 
     scene.append(dh);
 
@@ -24,5 +23,7 @@ window.addEventListener("DOMContentLoaded",function() {
   2) Change each <a-dodecahedron>'s position to a random x, y, and z location
   3) Change each <a-dodecahedron>'s to a random color.  Hint: Use rgb( ) and string interpolation 
   */
+
+  
   
 })
