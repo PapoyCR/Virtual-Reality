@@ -4,36 +4,826 @@
   </head>
   <body>
     <a-scene>
-      <a-entity class="plain_wall" position="0 0 0" rotation="0 0 0">
-        <a-entity class="plank" position="2 0 0">
-          <a-box position="0 0.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 1.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 2.5 0" width="1" height="1" depth="0.1" src=""></a-box>
+
+      <a-assets>
+        <img id="brick" src="brick.jpg">
+        <img id="pillar" src="Pillas.jpg">
+        <img id="sky" src="Skyy2.jpg">
+        <img id="roof" src="Tiles.jpg">
+        <img id="grass" src="grass.jpg">
+        <img id="road" src="Road.jpg">
+        <img id="cw" src="crossw.jpg">
+        <img id="walk" src="curb.jpeg">
+        <img id="broad" src="asp.jpeg">
+      </a-assets>
+
+      <a-entity>
+      <!--WALL ONE-->
+        <a-entity class="plain_wall" position="0 0 0" rotation="0 0 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <!--Door-->
+            <a-box position="0 1 0" width="1" height="2" depth="0.1" color="#55342B"></a-box>
+            <a-sphere radius="0.05" color="gold" theta-start="0" theta-length="720" position="0.45 1 0.025"></a-sphere>
+          
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="0 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+
         </a-entity>
-        <a-entity class="plank" position="1 0 0">
-          <a-box position="0 0.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 1.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 2.5 0" width="1" height="1" depth="0.1" src=""></a-box>
+
+        <!--WALL TWO-->
+        <a-entity class="plain_wall" position="-2.75 0 -2.75" rotation="0 90 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
         </a-entity>
-        <a-entity class="plank" position="0 0 0">
-          <a-box position="0 0.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 1.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 2.5 0" width="1" height="1" depth="0.1" src=""></a-box>
+
+        <!--WALL THREE-->
+        <a-entity class="plain_wall" position="0 0 -5.5" rotation="0 0 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
         </a-entity>
-        <a-entity class="plank" position="-1 0 0">
-          <a-box position="0 0.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 1.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 2.5 0" width="1" height="1" depth="0.1" src=""></a-box>
+
+        <!--WALL FOUR-->
+        <a-entity class="plain_wall" position="2.75 0 -2.75" rotation="0 270 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
         </a-entity>
-        <a-entity class="plank" position="-2 0 0">
-          <a-box position="0 0.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 1.5 0" width="1" height="1" depth="0.1" src=""></a-box>
-          <a-box position="0 2.5 0" width="1" height="1" depth="0.1" src=""></a-box>
+
+        <!--DA ROOF-->
+        <a-cone src="#roof" repeat="4 2" segments-radial="4" position="0 4 -2.75" rotation="0 45 0" radius-bottom="4" height="2"></a-cone>
+    
+      </a-entity>
+
+      <a-entity position="-9 0 0">
+      <!--WALL ONE-->
+        <a-entity class="plain_wall" position="0 0 0" rotation="0 0 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <!--Door-->
+            <a-box position="0 1 0" width="1" height="2" depth="0.1" color="#55342B"></a-box>
+            <a-sphere radius="0.05" color="gold" theta-start="0" theta-length="720" position="0.45 1 0.025"></a-sphere>
+          
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="0 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+
         </a-entity>
+
+        <!--WALL TWO-->
+        <a-entity class="plain_wall" position="-2.75 0 -2.75" rotation="0 90 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <!--WALL THREE-->
+        <a-entity class="plain_wall" position="0 0 -5.5" rotation="0 0 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <!--WALL FOUR-->
+        <a-entity class="plain_wall" position="2.75 0 -2.75" rotation="0 270 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <!--DA ROOF-->
+        <a-cone src="#roof" repeat="4 2" segments-radial="4" position="0 4 -2.75" rotation="0 45 0" radius-bottom="4" height="2"></a-cone>
+    
+      </a-entity>
+
+      <a-entity position="9 0 0">
+      <!--WALL ONE-->
+        <a-entity class="plain_wall" position="0 0 0" rotation="0 0 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <!--Door-->
+            <a-box position="0 1 0" width="1" height="2" depth="0.1" color="#55342B"></a-box>
+            <a-sphere radius="0.05" color="gold" theta-start="0" theta-length="720" position="0.45 1 0.025"></a-sphere>
+          
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="0 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+
+        </a-entity>
+
+        <!--WALL TWO-->
+        <a-entity class="plain_wall" position="-2.75 0 -2.75" rotation="0 90 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <!--WALL THREE-->
+        <a-entity class="plain_wall" position="0 0 -5.5" rotation="0 0 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <!--WALL FOUR-->
+        <a-entity class="plain_wall" position="2.75 0 -2.75" rotation="0 270 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <!--DA ROOF-->
+        <a-cone src="#roof" repeat="4 2" segments-radial="4" position="0 4 -2.75" rotation="0 45 0" radius-bottom="4" height="2"></a-cone>
+    
+      </a-entity>
+
+      <a-entity position="20 0 -3" rotation="0 270 0">
+      <!--WALL ONE-->
+        <a-entity class="plain_wall" position="0 0 0" rotation="0 0 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <!--Door-->
+            <a-box position="0 1 0" width="1" height="2" depth="0.1" color="#55342B"></a-box>
+            <a-sphere radius="0.05" color="gold" theta-start="0" theta-length="720" position="0.45 1 0.025"></a-sphere>
+          
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="0 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+
+        </a-entity>
+
+        <!--WALL TWO-->
+        <a-entity class="plain_wall" position="-2.75 0 -2.75" rotation="0 90 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <!--WALL THREE-->
+        <a-entity class="plain_wall" position="0 0 -5.5" rotation="0 0 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <!--WALL FOUR-->
+        <a-entity class="plain_wall" position="2.75 0 -2.75" rotation="0 270 0">
+          <a-entity class="plank" position="2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="0 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <!--Window-->
+            <a-box position="0 1.5 0" width="1" height="1" depth="0.1" opacity="0.5" color="blue"></a-box>
+            <a-cylinder position="0 1.5 0" radius="0.075"></a-cylinder>
+            <a-cylinder position="0 1.5 0" rotation="0 0 90" radius="0.075"></a-cylinder>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-1 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="plank" position="-2 0 0">
+            <a-box src="#brick" position="0 0.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 1.5 0" width="1" height="1" depth="0.1"></a-box>
+            <a-box src="#brick" position="0 2.5 0" width="1" height="1" depth="0.1"></a-box>
+          </a-entity>
+          <a-entity class="pillar" position="5.5 0 0">
+            <!--PILLAR-->
+            <a-cylinder src="#pillar" radius="0.25" height="6" position="-2.75 0 0"></a-cylinder>
+          </a-entity>
+        </a-entity>
+
+        <!--DA ROOF-->
+        <a-cone src="#roof" repeat="4 2" segments-radial="4" position="0 4 -2.75" rotation="0 45 0" radius-bottom="4" height="2"></a-cone>
+    
+      </a-entity>
+
+      <!--Very Cool Car #1-->
+      <a-entity scale="0.25 0.25 0.25" position="0 0.15 3">
+          <!--Tires-->
+          <a-cylinder position="3 0.2 4" rotation="90 0 0" color="black" radius="0.7"></a-cylinder>
+          <a-cylinder position="3 0.2 3" rotation="90 0 0" color="silver" radius="0.2"></a-cylinder>
+
+          <a-cylinder position="-3 0.4 4" rotation="90 0 0" color="black" radius="0.9"></a-cylinder>
+          <a-cylinder position="-3 0.2 3" rotation="90 0 0" color="silver" radius="0.2"></a-cylinder>
+
+          <a-cylinder position="3 0.2 -2" rotation="90 0 0" color="black" radius="0.7"></a-cylinder>
+          <a-cylinder position="-3 0.2 -1" rotation="90 0 0" color="silver" radius="0.2"></a-cylinder>
+
+          <a-cylinder position="-3 0.4 -2" rotation="90 0 0" color="black" radius="0.9"></a-cylinder>
+          <a-cylinder position="3 0.2 -1" rotation="90 0 0" color="silver" radius="0.2"></a-cylinder>
+
+          <!--Car-->
+          <a-box position="0.5 0.4 1" color="white" width="8.5" height="0.99" depth="4"></a-box>
+          <a-box position="5 0.4 1" color="red" width="0.5" height="0.99" depth="4"></a-box>
+          <a-box position="5.55 0.4 1" color="white" width="0.6" height="0.99" depth="4"></a-box>
+          
+
+          <!--The Thing on back-->
+          <a-box color="gray" position="-3 1 1" depth="3.99" height="2"></a-box>
+          
+          <a-cylinder color="silver" position="-4.8 1 2.8" rotation="90 90 0" radius="0.4" height="0.4"></a-cylinder>
+          <a-cone color="gray" position="-4.4 1 2.8" rotation="90 -90 0" radius-bottom="0.5" radius-top="0.7" height="0.5"></a-cone>
+          <a-cone color="silver" position="-3.9 1 2.8" rotation="90 -90 0" radius-bottom="0.3" radius-top="0.5" height="0.5"></a-cone>
+          <a-cone color="gray" position="-3.4 1 2.8" rotation="90 -90 0" radius-bottom="0.1" radius-top="0.3" height="0.5"></a-cone>
+
+          <a-cylinder color="silver" position="-4.8 2 1.8" rotation="90 -90 0" radius="0.4" height="0.4"></a-cylinder>
+          <a-cone color="gray" position="-4.4 2 1.8" rotation="90 -90 0" radius-bottom="0.5" radius-top="0.7" height="0.5"></a-cone>
+          <a-cone color="silver" position="-3.9 2 1.8" rotation="90 -90 0" radius-bottom="0.3" radius-top="0.5" height="0.5"></a-cone>
+          <a-cone color="gray" position="-3.4 2 1.8" rotation="90 -90 0" radius-bottom="0.1" radius-top="0.3" height="0.5"></a-cone>
+
+          <a-cylinder color="silver" position="-4.8 1 -0.8" rotation="90 90 0" radius="0.4" height="0.4"></a-cylinder>
+          <a-cone color="gray" position="-4.4 1 -0.8" rotation="90 -90 0" radius-bottom="0.5" radius-top="0.7" height="0.5"></a-cone>
+          <a-cone color="silver" position="-3.9 1 -0.8" rotation="90 -90 0" radius-bottom="0.3" radius-top="0.5" height="0.5"></a-cone>
+          <a-cone color="gray" position="-3.4 1 -0.8" rotation="90 -90 0" radius-bottom="0.1" radius-top="0.3" height="0.5"></a-cone>
+
+          <a-cylinder color="silver" position="-4.8 2 0.2" rotation="90 90 0" radius="0.4" height="0.4"></a-cylinder>
+          <a-cone color="gray" position="-4.4 2 0.2" rotation="90 -90 0" radius-bottom="0.5" radius-top="0.7" height="0.5"></a-cone>
+          <a-cone color="silver" position="-3.9 2 0.2" rotation="90 -90 0" radius-bottom="0.3" radius-top="0.5" height="0.5"></a-cone>
+          <a-cone color="gray" position="-3.4 2 0.2" rotation="90 -90 0" radius-bottom="0.1" radius-top="0.3" height="0.5"></a-cone>
+        
+          <!--Seat+Steering Wheel-->
+          <a-box color="gray" width="3" height="0.5" position="-1 1 1"></a-box>
+          <a-cylinder color="black" position="0.1 1.4 1" radius="0.1"></a-cylinder>
+          <a-sphere color="black" position="0 1.8 1" radius="0.15"></a-sphere>
+          <a-torus color="black" position="0 1.8 1" rotation="0 90 0" scale="0.2 0.2 0.2"></a-torus>
+
+          <!--Racer-->
+          <a-box color="blue" position="-1 1.625 1" height="0.75"></a-box>
+          <a-box color="tan" position="-1 2.075 1" height="0.15"></a-box>
+          <a-box color="red" position="-0.9 2.175 1" width="1.2" height="0.05"></a-box>
+          <a-box color="red" position="-1 2.250 1" height="0.10"></a-box>
+          <a-circle src="MarioKart.jpg" position="3 0.9 1" rotation="-90 90 0" radius="1"></a-circle>
+      </a-entity>
+
+      <!--Very Cool Car#2-->
+      <a-entity scale="0.25 0.25 0.25" position="8 0.15 3">
+          <!--Tires-->
+          <a-cylinder position="3 0.2 4" rotation="90 0 0" color="black" radius="0.7"></a-cylinder>
+          <a-cylinder position="3 0.2 3" rotation="90 0 0" color="silver" radius="0.2"></a-cylinder>
+
+          <a-cylinder position="-3 0.4 4" rotation="90 0 0" color="black" radius="0.9"></a-cylinder>
+          <a-cylinder position="-3 0.2 3" rotation="90 0 0" color="silver" radius="0.2"></a-cylinder>
+
+          <a-cylinder position="3 0.2 -2" rotation="90 0 0" color="black" radius="0.7"></a-cylinder>
+          <a-cylinder position="-3 0.2 -1" rotation="90 0 0" color="silver" radius="0.2"></a-cylinder>
+
+          <a-cylinder position="-3 0.4 -2" rotation="90 0 0" color="black" radius="0.9"></a-cylinder>
+          <a-cylinder position="3 0.2 -1" rotation="90 0 0" color="silver" radius="0.2"></a-cylinder>
+
+          <!--Car-->
+          <a-box position="0.5 0.4 1" color="white" width="8.5" height="0.99" depth="4"></a-box>
+          <a-box position="5 0.4 1" color="red" width="0.5" height="0.99" depth="4"></a-box>
+          <a-box position="5.55 0.4 1" color="white" width="0.6" height="0.99" depth="4"></a-box>
+          
+
+          <!--The Thing on back-->
+          <a-box color="gray" position="-3 1 1" depth="3.99" height="2"></a-box>
+          
+          <a-cylinder color="silver" position="-4.8 1 2.8" rotation="90 90 0" radius="0.4" height="0.4"></a-cylinder>
+          <a-cone color="gray" position="-4.4 1 2.8" rotation="90 -90 0" radius-bottom="0.5" radius-top="0.7" height="0.5"></a-cone>
+          <a-cone color="silver" position="-3.9 1 2.8" rotation="90 -90 0" radius-bottom="0.3" radius-top="0.5" height="0.5"></a-cone>
+          <a-cone color="gray" position="-3.4 1 2.8" rotation="90 -90 0" radius-bottom="0.1" radius-top="0.3" height="0.5"></a-cone>
+
+          <a-cylinder color="silver" position="-4.8 2 1.8" rotation="90 -90 0" radius="0.4" height="0.4"></a-cylinder>
+          <a-cone color="gray" position="-4.4 2 1.8" rotation="90 -90 0" radius-bottom="0.5" radius-top="0.7" height="0.5"></a-cone>
+          <a-cone color="silver" position="-3.9 2 1.8" rotation="90 -90 0" radius-bottom="0.3" radius-top="0.5" height="0.5"></a-cone>
+          <a-cone color="gray" position="-3.4 2 1.8" rotation="90 -90 0" radius-bottom="0.1" radius-top="0.3" height="0.5"></a-cone>
+
+          <a-cylinder color="silver" position="-4.8 1 -0.8" rotation="90 90 0" radius="0.4" height="0.4"></a-cylinder>
+          <a-cone color="gray" position="-4.4 1 -0.8" rotation="90 -90 0" radius-bottom="0.5" radius-top="0.7" height="0.5"></a-cone>
+          <a-cone color="silver" position="-3.9 1 -0.8" rotation="90 -90 0" radius-bottom="0.3" radius-top="0.5" height="0.5"></a-cone>
+          <a-cone color="gray" position="-3.4 1 -0.8" rotation="90 -90 0" radius-bottom="0.1" radius-top="0.3" height="0.5"></a-cone>
+
+          <a-cylinder color="silver" position="-4.8 2 0.2" rotation="90 90 0" radius="0.4" height="0.4"></a-cylinder>
+          <a-cone color="gray" position="-4.4 2 0.2" rotation="90 -90 0" radius-bottom="0.5" radius-top="0.7" height="0.5"></a-cone>
+          <a-cone color="silver" position="-3.9 2 0.2" rotation="90 -90 0" radius-bottom="0.3" radius-top="0.5" height="0.5"></a-cone>
+          <a-cone color="gray" position="-3.4 2 0.2" rotation="90 -90 0" radius-bottom="0.1" radius-top="0.3" height="0.5"></a-cone>
+        
+          <!--Seat+Steering Wheel-->
+          <a-box color="gray" width="3" height="0.5" position="-1 1 1"></a-box>
+          <a-cylinder color="black" position="0.1 1.4 1" radius="0.1"></a-cylinder>
+          <a-sphere color="black" position="0 1.8 1" radius="0.15"></a-sphere>
+          <a-torus color="black" position="0 1.8 1" rotation="0 90 0" scale="0.2 0.2 0.2"></a-torus>
+
+          <!--Racer-->
+          <a-box color="blue" position="-1 1.625 1" height="0.75"></a-box>
+          <a-box color="tan" position="-1 2.075 1" height="0.15"></a-box>
+          <a-box color="red" position="-0.9 2.175 1" width="1.2" height="0.05"></a-box>
+          <a-box color="red" position="-1 2.250 1" height="0.10"></a-box>
+          <a-circle src="MarioKart.jpg" position="3 0.9 1" rotation="-90 90 0" radius="1"></a-circle>
       </a-entity>
       
-      <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <!--Trees-->
+      <a-entity position="-13 0 27">
+          <!-- Trunk -->
+          <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+          <!-- Pines -->
+          <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+      </a-entity>
+      <a-entity position="-15 0 22">
+          <!-- Trunk -->
+          <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+          <!-- Pines -->
+          <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+      </a-entity>
+      <a-entity position="-3 0 20">
+          <!-- Trunk -->
+          <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+          <!-- Pines -->
+          <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+      </a-entity>
+      <a-entity position="-3 0 27">
+          <!-- Trunk -->
+          <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+          <!-- Pines -->
+          <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+      </a-entity>
+      <a-entity position="7 0 20">
+          <!-- Trunk -->
+          <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+          <!-- Pines -->
+          <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+      </a-entity>
+      <a-entity position="-8 0 20">
+          <!-- Trunk -->
+          <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+          <!-- Pines -->
+          <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+      </a-entity>
+      <a-entity position="8 0 27">
+          <!-- Trunk -->
+          <a-cylinder position="0 0 0" height="3" radius=".75" color="brown"></a-cylinder>
+          <!-- Pines -->
+          <a-cone position="0 1.5 0" height="1.5" radius-bottom="2" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 2.5 0" height="1.5" radius-bottom="1.7" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 3.5 0" height="1.5" radius-bottom="1.4" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 4.5 0" height="1.5" radius-bottom="1.1" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 5.5 0" height="1.5" radius-bottom="0.9" radius-top="0.1" color="green"></a-cone>
+          <a-cone position="0 6.5 0" height="1.5" radius-bottom="0.7" radius-top="0.1" color="green"></a-cone>
+      </a-entity>
+
+      <!--Roads,Curbs,Crosswalks-->
+      <a-box src="#road" repeat="2 1" height="0.1" width="8" depth="4" position="-3 0 6" scale="4 1 2"></a-box>
+      <a-box src="#road" repeat="2 1" height="0.1" width="8" depth="3" position="16 0 -18" rotation="0 90 0" scale="4 1 2"></a-box>
+      <a-box src="#broad" repeat="2 1" height="0.1"  width="8" depth="6" position="16 0 6" rotation="0 90 0"></a-box>
+      <a-box src="#road" repeat="2 1" height="0.1" width="8" depth="3" position="16 0 30" rotation="0 90 0" scale="4 1 2"></a-box>
+      <a-box src="#walk" repeat="2 1" height="0.1" width="8" depth="4" position="-3 0 14" scale="4 1 2"></a-box>
+      <a-box src="#cw" height="0.1" width="6" depth="4" position="16 0 0" ></a-box>
+      <a-box src="#cw" height="0.1" width="6" depth="4" position="16 0 12" ></a-box>
+      <a-box src="#walk" repeat="4 1" height="0.1" width="20" depth="4" position="23 0 6" rotation="0 90 0" scale="4 1 2"></a-box>
+      
+      <a-plane src="#grass" repeat="10 10" position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
+      <a-sky src="#sky"></a-sky>
       <a-camera position="0 1.4 5"></a-camera>
     </a-scene>
   </body>
