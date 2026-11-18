@@ -8,8 +8,10 @@ window.addEventListener("DOMContentLoaded",function() {
   loop();
 })
 
-function loop(){
-
+function loop(){  
+  for(let rocket of rockets){
+    rocket.launch();
+  }
   
   window.requestAnimationFrame( loop );
 }

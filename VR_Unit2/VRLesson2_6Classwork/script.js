@@ -1,4 +1,6 @@
 let scene;
+let mechTemplate;
+let array = []
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
